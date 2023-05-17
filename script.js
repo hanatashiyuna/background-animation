@@ -1,19 +1,21 @@
-var date = new Date();
+//set time
+function startTime() {
+    const today = new Date();
+    let h = today.getHours();
+    let m = today.getMinutes();
+    let s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('time_set').innerHTML =  h + ":" + m + ":" + s;
+    setTimeout(startTime, 1000);
+}
 
-var day = date.getDate();
-var month = date.getMonth() + 1;
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};
+    return i;
+}
 
-var bgElement = document.getElementById("background");
-
-// bgElement.innerHTML = day;
-// var onday = document.getElementById("onday");
-
-// if(day === null || day === undefined){
-//     console.log('null');
-// }else{
-//     onday.style.top = "154px";
-//     onday.style.left = "141px";
-// }
+startTime()
 
 // mouse move
 const canvas = document.getElementById("canvas");
