@@ -125,7 +125,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 50px;
+    height: 35px;
     font-weight: 600;
     color: #262626;
     border-bottom: 2px solid #262626;
@@ -139,8 +139,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 50px;
+    height: 35px;
     color: #262626;
+    z-index: 1;
 }
 
 .calendar_number:nth-child(7n){
@@ -150,7 +151,7 @@ body {
 
 .calendar_number--current,
 .calendar_number:hover{
-    background-color: #009688;
+    background-color: rgb(0, 213, 255);
     color: #fff;
     font-weight: 700;
     cursor: pointer;
