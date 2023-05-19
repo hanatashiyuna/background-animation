@@ -46,9 +46,112 @@ body {
 .time{
     position: absolute;
     top: 48px;
-    right: 335px;
+    right: 240px;
     display: flex;
     font-family: 'Mogra', cursive;
     font-size: 60px;
     color: #ffffff;
+}
+
+/* calendar */
+.calendar-content{
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.calendar-content::before{
+    content: "";
+    width: 102vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    fill: blur(10px);
+    background: inherit;
+}
+
+.calendar{
+    position: absolute;
+    top: 4%;
+    left: 5%;
+    width: 550px;
+    background-color: rgba(255, 255, 255, .1);
+    box-sizing: border-box;
+    box-shadow:  0 5px 5px rgba(0, 0, 0, .5);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.calendar-picture {
+    position: relative;
+    height: 60px;
+    color: #262626;
+    background: rgb(255, 255, 255, .02);
+    text-shadow: 0 2px 2px rgba(45, 45, 45, 0.1);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calendar-picture::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(255, 255, 255, .25), rgba(255, 255, 255, .1));
+}
+
+.calendar-picture h3{
+    margin: 0;
+    font-size: 55px;
+    font-weight: 500;
+}
+
+.calendar-date{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    grid-gap: 10px;
+    box-sizing: border-box;
+}
+
+.calendar_day{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    font-weight: 600;
+    color: #262626;
+    border-bottom: 2px solid #262626;
+}
+
+.calendar_day:nth-child(7){
+    color: #ff685d;
+}
+
+.calendar_number{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    color: #262626;
+}
+
+.calendar_number:nth-child(7n){
+    color: #ff685d;
+    font: 700;
+}
+
+.calendar_number--current,
+.calendar_number:hover{
+    background-color: #009688;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
 }

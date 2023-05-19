@@ -8,13 +8,30 @@
 </head>
 <body>
     <canvas class="background" id="background"></canvas>
-    <div class="onday" id="onday"></div>
+    <div class="calendar-content">
+        <div class="calendar">
+            <div class="calendar-picture">
+                <h3></h3>
+            </div>
+
+            <div class="calendar-date" id="lc">
+                <div class="calendar_day">Mo</div>
+                <div class="calendar_day">Tu</div>
+                <div class="calendar_day">Wed</div>
+                <div class="calendar_day">Th</div>
+                <div class="calendar_day">Fr</div>
+                <div class="calendar_day">Sa</div>
+                <div class="calendar_day">Su</div>
+            </div>
+        </div>
+    </div>
     <div class="mouse" id="mouse"></div>
     <div class="time">
         <p class="time_set" id="time_set"></p>
     </div>
 
     <canvas id="canvas"></canvas>
-    <script src="script.js"></script>
+    <script src="./moment.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
